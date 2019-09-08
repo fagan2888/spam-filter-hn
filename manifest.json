@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Hide spam on HN",
+  "description": "Puts spammy websites in the visited link style.",
+  "homepage_url": "https://maxshinnpotential.com",
+  "version": "1.0",
+  "options_ui": {
+      "page": "options.html",
+      "browser_style": true
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["*://news.ycombinator.com/*"],
+      "js": ["./substitute.js"]
+    }
+  ]
+}
